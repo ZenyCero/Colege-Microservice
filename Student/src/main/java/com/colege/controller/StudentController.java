@@ -18,21 +18,15 @@ public class StudentController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void save(
-            @RequestBody Student student
-    ) {
+    public void save(@RequestBody Student student) {
         service.saveStudent(student);
     }
-
     @GetMapping
     public ResponseEntity<List<Student>> findAllStudents() {
         return ResponseEntity.ok(service.findAllStudents());
     }
-
     @GetMapping("/school/{school-id}")
-    public ResponseEntity<List<Student>> findAllStudents(
-            @PathVariable("school-id") Integer schoolId
-    ) {
+    public ResponseEntity<List<Student>> findAllStudents(@PathVariable("school-id") Integer schoolId) {
         return ResponseEntity.ok(service.findAllStudentsBySchool(schoolId));
     }
 }
