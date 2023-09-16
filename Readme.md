@@ -1,7 +1,5 @@
 # Microservices Demo de Registro de Colegios y Estudiantes
 
-Creditos a alibou autor del proyecto 
-
 ![alt text](diagram.png)
 
 Este repositorio contiene un proyecto de demostración que muestra una aplicación basada en microservicios, diseñada para brindar una comprensión práctica de la arquitectura e implementación de microservicios. El proyecto se compone de varios componentes, incluyendo una Pasarela de API, un Servidor de Configuración, un Servidor de Descubrimiento, y dos microservicios: Student (Estudiante) y School (Escuela).
@@ -97,6 +95,8 @@ This project is licensed under the [MIT License](LICENSE).
 [Website] - [https://aliboucoding.com/courses]
 
 Project Link: https://github.com/ali-bouali/springboot-3-micro-service-demo
+
+Creditos a alibou autor del proyecto
 
 ## Acknowledgements
 
