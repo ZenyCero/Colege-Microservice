@@ -4,98 +4,98 @@
 
 Este repositorio contiene un proyecto de demostración que muestra una aplicación basada en microservicios, diseñada para brindar una comprensión práctica de la arquitectura e implementación de microservicios. El proyecto se compone de varios componentes, incluyendo una Pasarela de API, un Servidor de Configuración, un Servidor de Descubrimiento, un Servidor de Seguridad y dos microservicios: Student (Estudiante) y School (Escuela).
 
-## Table of Contents
+## Índice
 
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-- [Project Components](#project-components)
-    - [API Gateway](#api-gateway)
-    - [Config Server](#config-server)
-    - [Discovery Server](#discovery-server)
-    - [Security Server](#security-server)
-    - [Student Microservice](#student-microservice)
-    - [School Microservice](#school-microservice)
-- [Inter-Service Communication](#inter-service-communication)
-    - [Using OpenFeign](#using-openfeign)
-- [Distributed Tracing](#distributed-tracing)
-    - [Using Zipkin](#using-zipkin)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+- [Cómo empezar](#primeros-pasos)
+  - [Requisitos previos](#pre-requisitos)
+  - [Instalación](#instalacion)
+- [Componentes del proyecto](#componentes-del-proyecto)
+  - [Pasarela API](#pasarela-api)
+  - [Servidor de configuración](#servidor-de-configuración)
+  - [Servidor de descubrimiento](#discovery-server)
+  - [Servidor de seguridad](#servidor-de-seguridad)
+  - [Microservicio de estudiantes](#microservicio-de-estudiantes)
+  - [Microservicio escolar](#microservicio-de-escuela)
+- [Comunicación entre servicios](#comunicación-entre-servicios)
+  - [Uso de OpenFeign](#uso-de-openfeign)
+- [Rastreo distribuido](#rastreo-distribuido)
+  - [Uso de Zipkin](#usando-zipkin)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
+- [Agradecimientos](#agradecimientos)
 
-## Getting Started
+## Primeros Pasos
 
-Follow the instructions below to set up the project on your local machine for development and testing purposes.
+Siga las siguientes instrucciones para configurar el proyecto en su máquina local con fines de desarrollo y prueba.
 
-### Prerequisites
+### Pre-requisitos
 
-Ensure you have the following software installed on your system before proceeding:
+Asegúrese de tener instalado el siguiente software en su sistema antes de continuar:
 
-- Java Development Kit (JDK) 17 or later
+- Java Development Kit (JDK) 17 o posterior
 - Maven
-- Docker (optional, for containerization)
+- Docker (opcional, para la contenedorización)
 
-### Installation
+### Instalacion
 
-1. Clone the repository:
+1. Clone el repositorio:
 
 ```git clone https://github.com/ZenyCero/Colege-Microservice.git```
 
-2. Navigate to the project directory:
-3. Build and package each component with Maven:
+2. Navega al directorio del proyecto:
+3. Construye y empaqueta cada componente con Maven:
 
 
-## Project Components
 
-### API Gateway
+## Componentes del proyecto
 
-The API Gateway serves as the single entry point for all client requests, managing and routing them to the appropriate microservices.
+### Pasarela API
 
-### Config Server
+El API Gateway sirve como único punto de entrada para todas las peticiones de los clientes, gestionándolas y dirigiéndolas a los microservicios apropiados.
 
-The Config Server centralizes configuration management for all microservices, simplifying application maintenance and consistency across environments.
+### Servidor de configuración
+
+El Config Server centraliza la gestión de la configuración de todos los microservicios, simplificando el mantenimiento de la aplicación y la coherencia entre entornos.
 
 ### Discovery Server
 
-The Discovery Server provides service registration and discovery, enabling seamless service-to-service communication within the microservices ecosystem.
+El Discovery Server proporciona registro y descubrimiento de servicios, permitiendo una comunicación fluida de servicio a servicio dentro del ecosistema de microservicios.
 
-### Security Server
+### Servidor de seguridad
 
-The Security Server provides mechanisms to ensure the security of the api such as request filtering and token validation.
+El servidor de seguridad proporciona mecanismos para garantizar la seguridad de la API, como el filtrado de solicitudes y la validación de tokens.
 
-### Student Microservice
+### Microservicio de estudiantes
 
-The Student Microservice is responsible for managing student-related data and operations, such as adding, updating, and retrieving student records.
+El microservicio de estudiantes se encarga de gestionar los datos y operaciones relacionados con los estudiantes, como añadir, actualizar y recuperar registros de estudiantes.
 
-### School Microservice
+### Microservicio de escuela
 
-The School Microservice manages school-related data and operations, including adding, updating, and retrieving school records.
+El microservicio de escuela se encarga de gestionar los datos y operaciones relacionados con la escuela, como añadir, actualizar y recuperar registros de escuelas.
 
-## Inter-Service Communication
+### Comunicación entre servicios
 
-### Using OpenFeign
+### Uso de OpenFeign
 
-This project demonstrates inter-service communication using OpenFeign, a declarative REST client that simplifies service-to-service communication within the microservices ecosystem.
+Este proyecto demuestra la comunicación entre servicios utilizando OpenFeign, un cliente REST declarativo que simplifica la comunicación de servicio a servicio dentro del ecosistema de microservicios.
 
-## Distributed Tracing
+## Rastreo Distribuido
 
-### Using Zipkin
+### Usando Zipkin
 
-The project showcases the use of Zipkin for distributed tracing, enhancing application observability and enabling the visualization and troubleshooting of latency issues.
+El proyecto muestra el uso de Zipkin para el rastreo distribuido, mejorando la observabilidad de la aplicación y permitiendo la visualización y solución de problemas de latencia.
 
-## License
+## Licencia
 
-This project is licensed under the [MIT License](LICENSE).
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
 
-## Contact
+## Contacto
 
 [Elias Tagle] - [eliastzv@hotmail.com]
 
-Project Link: https://github.com/ZenyCero/Colege-Microservice.git
+Enlace del proyecto: https://github.com/ZenyCero/Colege-Microservice.git
 
-## Acknowledgements
+## Agradecimientos
 
 - [OpenFeign](https://github.com/OpenFeign/feign)
 - [Zipkin](https://zipkin.io/)
