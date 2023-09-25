@@ -34,8 +34,21 @@ services:
       - "9411:9411"
     networks:
       - zipkin
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+      - 5673:5672
+      - 15673:15672
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+      - rabbitmq
 
 networks:
+  rabbitmq:
+    driver: bridge
   postgres:
     driver: bridge
   zipkin:
