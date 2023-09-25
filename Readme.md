@@ -2,7 +2,7 @@
 
 ![alt text](diagram.png)
 
-Este repositorio contiene un proyecto de demostración que muestra una aplicación basada en microservicios, diseñada para brindar una comprensión práctica de la arquitectura e implementación de microservicios. El proyecto se compone de varios componentes, incluyendo una Pasarela de API, un Servidor de Configuración, un Servidor de Descubrimiento, y dos microservicios: Student (Estudiante) y School (Escuela).
+Este repositorio contiene un proyecto de demostración que muestra una aplicación basada en microservicios, diseñada para brindar una comprensión práctica de la arquitectura e implementación de microservicios. El proyecto se compone de varios componentes, incluyendo una Pasarela de API, un Servidor de Configuración, un Servidor de Descubrimiento, un Servidor de Seguridad y dos microservicios: Student (Estudiante) y School (Escuela).
 
 ## Table of Contents
 
@@ -13,6 +13,7 @@ Este repositorio contiene un proyecto de demostración que muestra una aplicaci�
     - [API Gateway](#api-gateway)
     - [Config Server](#config-server)
     - [Discovery Server](#discovery-server)
+    - [Security Server](#security-server)
     - [Student Microservice](#student-microservice)
     - [School Microservice](#school-microservice)
 - [Inter-Service Communication](#inter-service-communication)
@@ -60,6 +61,10 @@ The Config Server centralizes configuration management for all microservices, si
 
 The Discovery Server provides service registration and discovery, enabling seamless service-to-service communication within the microservices ecosystem.
 
+### Security Server
+
+The Security Server provides mechanisms to ensure the security of the api such as request filtering and token validation.
+
 ### Student Microservice
 
 The Student Microservice is responsible for managing student-related data and operations, such as adding, updating, and retrieving student records.
@@ -80,26 +85,19 @@ This project demonstrates inter-service communication using OpenFeign, a declara
 
 The project showcases the use of Zipkin for distributed tracing, enhancing application observability and enabling the visualization and troubleshooting of latency issues.
 
-## Contributing
-
-Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-[Ali Bouali] - [contact@aliboucoding.com]
+[Elias Tagle] - [eliastzv@hotmail.com]
 
-[Website] - [https://aliboucoding.com/courses]
-
-Project Link: https://github.com/ali-bouali/springboot-3-micro-service-demo
-
-Creditos a alibou autor del proyecto
+Project Link: https://github.com/ZenyCero/Colege-Microservice.git
 
 ## Acknowledgements
 
 - [OpenFeign](https://github.com/OpenFeign/feign)
 - [Zipkin](https://zipkin.io/)
 - [Spring Cloud Netflix](https://spring.io/projects/spring-cloud-netflix)
+- [Spring Security](https://spring.io/projects/spring-security)
