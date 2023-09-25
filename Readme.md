@@ -41,7 +41,7 @@ Ensure you have the following software installed on your system before proceedin
 
 1. Clone the repository:
 
-```git clone git remote add origin git@github.com:ali-bouali/springboot-3-micro-service-demo.git```
+```git clone https://github.com/ZenyCero/Colege-Microservice.git```
 
 2. Navigate to the project directory:
 3. Build and package each component with Maven:
