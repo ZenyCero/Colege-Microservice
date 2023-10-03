@@ -1,10 +1,8 @@
 spring:
   application:
     name: student
-  #config:
-    #import: optional:configserver:http://localhost:8888
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/colege
-    username: zenycero
-    password: zenycero
+    username: devjunior
+    password: password
 
