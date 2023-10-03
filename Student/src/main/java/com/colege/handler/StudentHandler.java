@@ -26,7 +26,7 @@ public class StudentHandler {
         );
     }
     public Mono<ServerResponse> getAllByIdSchool(ServerRequest request){
-        Integer idSchool = Integer.parseInt(request.pathVariable("idSchool"));
+        Integer idSchool = Integer.parseInt(request.pathVariable("id_school"));
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON)
                 .body(service.getAllByIdSchool(idSchool), Student.class);
     }

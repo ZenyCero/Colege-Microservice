@@ -9,7 +9,7 @@ import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 @Configuration
 public class StudentRouter {
-    private static final String PATH = "student";
+    private static final String PATH = "api/v1/students";
     @Bean
     public WebProperties.Resources resources(){
         return new WebProperties.Resources();
@@ -19,7 +19,7 @@ public class StudentRouter {
         return RouterFunctions.route()
                 .GET(PATH, handle::getAll)
                 .POST(PATH, handle::save)
-                .GET(PATH + "/idSchool", handle::getAllByIdSchool)
+                .GET(PATH + "/school/{id_school}", handle::getAllByIdSchool)
                 .build();
     }
 }
