@@ -1,12 +1,9 @@
 package com.colege.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 
-@Entity
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,11 +12,13 @@ import lombok.*;
 public class Student {
 
     @Id
-    @GeneratedValue
-    private Integer id;
+    @Column("id_student")
+    private Integer idStudent;
+    @Column("first_name")
     private String firstname;
+    @Column("last_name")
     private String lastname;
-    @Column(unique = true)
     private String email;
+    @Column("school_id")
     private Integer schoolId;
 }
