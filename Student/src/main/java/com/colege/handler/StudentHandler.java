@@ -2,6 +2,7 @@ package com.colege.handler;
 
 import com.colege.entity.Student;
 import com.colege.service.StudentService;
+import com.colege.validation.ObjectValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -13,12 +14,13 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class StudentHandler {
     private final StudentService service;
+    private final ObjectValidator objectValidator;
 
     public Mono<ServerResponse> getAll(ServerRequest request){
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(service.getALl(), Student.class);
     }
     public Mono<ServerResponse> save(ServerRequest request){
-        Mono<Student> student = request.bodyToMono(Student.class);
+        Mono<Student> student = request.bodyToMono(Student.class).doOnNext(objectValidator::validate);
         return student.flatMap(
                 dto->ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(service.save(dto), Student.class)
         );
