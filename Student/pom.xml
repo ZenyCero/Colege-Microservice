@@ -11,10 +11,12 @@
     <groupId>com.colege</groupId>
     <artifactId>student</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>school</name>
+    <name>student</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2022.0.2</spring-cloud.version>
     </properties>
     <dependencies>
