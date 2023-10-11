@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -23,6 +24,10 @@ public class SchoolService {
 
     public void saveSchool(School school) {
         repository.save(school);
+    }
+    @SneakyThrows
+    public Optional<School> findById(Integer id){
+        return repository.findById(id);
     }
     @SneakyThrows
     public List<School> findAllSchools() {

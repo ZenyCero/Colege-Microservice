@@ -10,9 +10,9 @@ spring:
     name: SECURITY
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/devjunior
-    username: devjunior
-    password: password
+    url: jdbc:postgresql://localhost:5432/colege
+    username: zenycero
+    password: zenycero
   jpa:
     hibernate:
       ddl-auto: update

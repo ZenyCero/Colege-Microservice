@@ -25,11 +25,11 @@ class StudentServiceTest {
 
     @BeforeEach
     void setUp() {
-        service = new StudentService(repository);
+        service = new StudentService(repository,null);
     }
 
     @Test
-    void verify_that_entity_send_repo_is_equal_to_service() {
+    void verify_that_entity_send_repo_is_equal_to_service() throws CustomExpection {
         // TODO: given
         Student student = Student.builder()
                 .id(1).email("elias@gmail.com").schoolId(1).lastname("tagle").firstname("elias").build();

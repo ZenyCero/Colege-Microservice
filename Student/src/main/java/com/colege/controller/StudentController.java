@@ -1,6 +1,7 @@
 package com.colege.controller;
 
 import com.colege.entity.Student;
+import com.colege.expection.CustomExpection;
 import com.colege.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class StudentController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void save(@RequestBody Student student) {
+    public void save(@RequestBody Student student) throws CustomExpection {
         service.saveStudent(student);
     }
     @GetMapping
