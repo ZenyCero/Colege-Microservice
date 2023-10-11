@@ -3,8 +3,8 @@ services:
     container_name: postgresql
     image: postgres
     environment:
-      POSTGRES_USER: alibou
-      POSTGRES_PASSWORD: alibou
+      POSTGRES_USER: zenycero
+      POSTGRES_PASSWORD: zenycero
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
@@ -34,21 +34,21 @@ services:
       - "9411:9411"
     networks:
       - zipkin
-  rabbitmq:
-    image: rabbitmq:3.8-management-alpine
-    container_name: 'rabbitmq'
-    ports:
-      - 5673:5672
-      - 15673:15672
-    volumes:
-      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
-    networks:
-      - rabbitmq
+  #rabbitmq:
+  #  image: rabbitmq:3.8-management-alpine
+  #  container_name: 'rabbitmq'
+  #  ports:
+  #    - 5673:5672
+  #    - 15673:15672
+  #  volumes:
+  #    - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+  #    - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+  #  networks:
+  #    - rabbitmq
 
 networks:
-  rabbitmq:
-    driver: bridge
+  #rabbitmq:
+  #  driver: bridge
   postgres:
     driver: bridge
   zipkin:

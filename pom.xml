@@ -29,25 +29,34 @@
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
-                <version>3.3.2</version>
+                <version>2.6.0</version>
                 <configuration>
                     <to>
-                        <image>colege/app:${project.version}</image>
+                        <image>colege/app:${project.artifactId}</image>
                         <tags>
                             <tag>latest</tag>
                         </tags>
                     </to>
-                    <extraDirectories>
+                    <!-- <extraDirectories>
                         <paths>
                             <path>
-                                <!-- Ruta a excluir -->
                                 <from>D:\Proyectos\Empleo\SpringBoot\colege-microservices</from>
                             </path>
                         </paths>
-                    </extraDirectories>
+                    </extraDirectories> -->
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
